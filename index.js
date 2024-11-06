@@ -6,7 +6,7 @@ const port = process.env.PORT || 5000;
 app.use(cors())
 
 async function WebScarpe(username) {
-    const browser = await puppeteer.launch({ headless: true});
+    const browser = await puppeteer.launch({ headless: false});
     try {
         const page = await browser.newPage();
         page.setDefaultTimeout(15000);
